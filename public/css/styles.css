@@ -181,3 +181,12 @@ button:disabled {
     font-weight: 300;
     padding: 12px 24px 0 24px;
 }
+
+.users li::before {
+    content: "\2022";
+    color: #12ca75;
+    font-weight: 600;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
