@@ -7,6 +7,7 @@ const $messageFormButton = $messageForm.querySelector('button')
 const $sendLocationButton = document.querySelector('#send-location')
 const $messages = document.querySelector('#messages')
 const $sidebar = document.querySelector('#sidebar')
+const $scrollButton = document.querySelector('#scroll-button')
 
 // Templates
 const messageTemplate = document.querySelector('#message-template').innerHTML
@@ -81,7 +82,6 @@ $messageForm.addEventListener('submit', (event) => {
         if (error) {
             return console.error(error);
         }
-        console.log('Message delivered!');
     })
 })
 
@@ -100,6 +100,12 @@ $sendLocationButton.addEventListener('click', () => {
             console.log('Location Shared!');
         })
     })
+})
+
+$scrollButton.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    $messages.scrollTop = $messages.scrollHeight
 })
 
 socket.emit('join', { username, room }, (error) => {

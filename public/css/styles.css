@@ -114,15 +114,18 @@ button:disabled {
 }
 
 /* Scroll down button */
+.scroll__button {
+    position: relative;
+}
 
-button.scroll__down {
+.scroll__button button {
     border: none;
     height: 2.5rem;
-    widows: 2.5rem;
+    width: 2.5rem;
     border-radius: 50%;
     position: absolute;
     right: 5rem;
-    bottom: 0;
+    bottom: 0rem;
     outline: none;
     background: rgba(189, 185, 195, 0.5);
 }
