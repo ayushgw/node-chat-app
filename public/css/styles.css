@@ -110,6 +110,38 @@ button:disabled {
     flex-grow: 1;
     padding: 24px 24px 0 24px;
     overflow-y: scroll;
+    position: relative;
+}
+
+/* Scroll down button */
+
+button.scroll__down {
+    border: none;
+    height: 2.5rem;
+    widows: 2.5rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 5rem;
+    bottom: 0;
+    outline: none;
+    background: rgba(189, 185, 195, 0.5);
+}
+
+.chevron::before {
+    border-style: solid;
+    border-width: 0.2em 0.2em 0 0;
+    content: '';
+    display: inline-block;
+    height: 0.65em;
+    position: relative;
+    transform: rotate(-45deg);
+    vertical-align: top;
+    width: 0.65em;
+}
+
+.chevron.chevron__down::before {
+    top: 0;
+	transform: rotate(135deg);
 }
 
 /* Message Styles */
